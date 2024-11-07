@@ -1,0 +1,25 @@
+{
+  "name": "node-beacon",
+  "version": "0.1.0",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "prepublish": "bun format && bun build",
+    "build": "tsup",
+    "format": "biome check src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "@types/sinon": "^17.0.3",
+    "sinon": "^19.0.2",
+    "tsup": "^8.3.5",
+    "ultracite": "^4.1.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
+}
