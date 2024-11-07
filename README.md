@@ -136,18 +136,18 @@ if (!success) {
 ```mermaid
 flowchart TD
     subgraph Main Process
-        A[Calls sendBeacon(url, data)]
-        B[Serializes the data]
-        C[Sends the data to the child process via IPC]
-        D[Exits immediately or continues execution]
+        A(Calls sendBeacon)
+        B(Serializes the data)
+        C(Sends the data to the child process via IPC)
+        D(Exits immediately or continues execution)
         A --> B --> C --> D
     end
 
     subgraph Child Process
-        E[Receives data from the main process]
-        F[Adds the data to its processing queue]
-        G[Sends HTTP requests asynchronously]
-        H[Exits when all pending requests are processed]
+        E(Receives data from the main process)
+        F(Adds the data to its processing queue)
+        G(Sends HTTP requests asynchronously)
+        H(Exits when all pending requests are processed)
         E --> F --> G --> H
     end
 ```
